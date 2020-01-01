@@ -1864,7 +1864,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['etudiants'],
   data: function data() {
@@ -1876,13 +1875,13 @@ __webpack_require__.r(__webpack_exports__);
       specialite: '',
       groupe: '',
       promo: '',
-      date_naissance: new Date().toISOString().slice(0, 10),
+      //   date_naissance : new Date().toISOString().slice(0,10),
       adresse: ''
     };
   },
   methods: {
     submitDonnees: function submitDonnees() {
-      axios.post('/etudiants', {
+      axios.post('/DemoPHP/public/api/etudiants', {
         nom: this.nom,
         prenom: this.prenom,
         niveau: this.niveau,
@@ -1890,8 +1889,12 @@ __webpack_require__.r(__webpack_exports__);
         specialite: this.specialite,
         groupe: this.groupe,
         promo: this.promo,
-        date_naissance: this.date_naissance,
+        //       date_naissance: this.date_naissance,
         adresse: this.adresse
+      }).then(function (response) {
+        console.log(response);
+      })["catch"](function (error) {
+        console.log(error.response);
       });
     }
   }
@@ -37453,32 +37456,6 @@ var render = function() {
               return
             }
             _vm.promo = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.date_naissance,
-            expression: "date_naissance"
-          }
-        ],
-        staticClass: "border rounded p-3",
-        attrs: {
-          type: "date",
-          name: "date_naissance",
-          placeholder: "Date de naissance"
-        },
-        domProps: { value: _vm.date_naissance },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.date_naissance = $event.target.value
           }
         }
       }),

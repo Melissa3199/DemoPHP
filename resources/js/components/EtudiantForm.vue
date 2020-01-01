@@ -15,7 +15,6 @@
   
       <input type="text" name="promo" placeholder="Promo" class="border rounded p-3" v-model="promo"/>
     
-     <input type="date" name="date_naissance" placeholder="Date de naissance" class="border rounded p-3" v-model="date_naissance"/>
     
       <input type="text" name="adresse" placeholder="Adresse" class="border rounded p-3" v-model="adresse"/>
     
@@ -39,7 +38,7 @@
                 specialite: '',
                 groupe: '',
                 promo: '',
-                date_naissance : new Date().toISOString().slice(0,10),
+            //   date_naissance : new Date().toISOString().slice(0,10),
                 adresse:'',
 
             }
@@ -47,7 +46,7 @@
 
         methods:{
             submitDonnees(){
-                axios.post('/etudiants', {
+                axios.post('/DemoPHP/public/api/etudiants', {
                     nom: this.nom,
                     prenom: this.prenom,
                     niveau: this.niveau,
@@ -55,10 +54,16 @@
                     specialite: this.specialite,
                     groupe: this.groupe,
                     promo: this.promo,
-                    date_naissance: this.date_naissance,
+             //       date_naissance: this.date_naissance,
                     adresse: this.adresse,
 
                 })
+                .then(response => { 
+                     console.log(response)
+                 })
+                .catch(error => {
+                    console.log(error.response)
+                 })
             }
         }
 

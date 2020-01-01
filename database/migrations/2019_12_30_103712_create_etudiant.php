@@ -22,7 +22,7 @@ class CreateEtudiant extends Migration
             $table->char('specialite',2)->nullable();
             $table->integer('groupe');
             $table->year('promo');
-            $table->date('date_naissance');
+        //    $table->date('date_naissance');
             $table->string('adresse',20);
             
             

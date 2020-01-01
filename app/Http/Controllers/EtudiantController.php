@@ -7,11 +7,11 @@ use App\Etudiant;
 use App\Http\Requests;
 class EtudiantController extends Controller
 {
-    function afficher_renseignements()
+   function afficher_renseignements()
     {
         $etudiant = Etudiant::all();
         $arr=Array('etudiant'=>$etudiant);
-        return view('etudiant.afficher_renseignements',$arr);
+       // return view('etudiant.afficher_renseignements',$arr);
     }
 
 
@@ -196,27 +196,32 @@ $newetudiant->groupe=$request->input('groupe');
             'section' => ['required'],
             'specialite' => ['required'],
             'groupe' => ['required'],
-            'date' => ['required'],
+            // 'date' => ['required'],
+            'promo' => ['required'],
+
+           
             'adresse' => ['required'],
 
 
         ]);
 
-        Etudiant::create([
+    Etudiant::create([
             'nom' => request('nom'),
             'prenom' => request('prenom'),
             'niveau' => request('niveau'),
             'section' => request('section'),
             'specialite' => request('specialite'),
             'groupe' => request('groupe'),
-            'date' => request('date'),
+           // 'date' => request('date'),
+            'promo' => request('promo'),
+
             'adresse' => request('adresse'),
 
         ]); 
 
 
-        return "Vos données ont bien été ajoutées";
-    }
+        
+}
 
     public function index(){
 
