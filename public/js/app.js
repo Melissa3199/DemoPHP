@@ -1893,6 +1893,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['etudiants'],
   data: function data() {
@@ -37323,242 +37344,423 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "form",
-    { staticClass: "flex flex-col", on: { submit: _vm.submitDonnees } },
-    [
-      _c(
-        "label",
-        {
-          staticClass: "label",
-          attrs: {
-            "font-size:16px": "",
-            "color:#555": "",
-            "texte-transform:": "",
-            capitalize: "",
-            "display:": "",
-            block: "",
-            "margin-bottom:": "",
-            "5px": ""
-          }
-        },
-        [_vm._v("Nom")]
-      ),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
+  return _c("body", [
+    _c(
+      "form",
+      {
+        staticClass: "flex flex-col",
+        staticStyle: {},
+        on: { submit: _vm.submitDonnees }
+      },
+      [
+        _c(
+          "h2",
           {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.nom,
-            expression: "nom"
-          }
-        ],
-        staticClass: "border rounded p-3",
-        attrs: { type: "text", name: "nom", placeholder: "Nom" },
-        domProps: { value: _vm.nom },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
+            staticStyle: {
+              "font-size": "24px",
+              color: "#525252",
+              "font-weight": "400",
+              "margin-bottom": "40px",
+              "margin-top": "100px"
             }
-            _vm.nom = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "label" }, [_vm._v("Prenom")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.prenom,
-            expression: "prenom"
-          }
-        ],
-        staticClass: "border rounded p-3",
-        attrs: { type: "text", name: "prenom", placeholder: "Prenom" },
-        domProps: { value: _vm.prenom },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.prenom = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "label" }, [_vm._v("Niveau")]),
-      _vm._v(" "),
-      _c(
-        "SELECT",
-        {
-          staticClass: "border rounded p-3",
-          attrs: { name: "niveau", placeholder: "Niveau" },
-          model: {
-            value: _vm.niveau,
-            callback: function($$v) {
-              _vm.niveau = $$v
-            },
-            expression: "niveau"
-          }
-        },
-        [
-          _c("option", [_vm._v("1CP")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("2CP")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("1CS")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("2CS")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("3CS")])
-        ]
-      ),
-      _vm._v(" "),
-      _c("label", { staticClass: "label" }, [_vm._v("Section")]),
-      _vm._v(" "),
-      _c(
-        "SELECT",
-        {
-          staticClass: "border rounded p-3",
-          attrs: { name: "section", placeholder: "Section" },
-          model: {
-            value: _vm.section,
-            callback: function($$v) {
-              _vm.section = $$v
-            },
-            expression: "section"
-          }
-        },
-        [
+          },
+          [_vm._v("Formulaire d'ajout d'étudiants")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticStyle: { display: "flex", "flex-wrap": "wrap" } }, [
           _c(
-            "option",
-            { attrs: { disabled: "disabled", selected: "selected" } },
-            [_vm._v("Section")]
+            "label",
+            {
+              staticClass: "label",
+              staticStyle: {
+                color: "#555",
+                "font-family": "georgia,garamond,serif",
+                "font-size": "16px",
+                "font-style": "bold",
+                "margin-right": "15px",
+                "margin-top": "8px"
+              }
+            },
+            [_vm._v("Nom")]
           ),
           _vm._v(" "),
-          _c("option", [_vm._v("A")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("B")]),
-          _vm._v(" "),
-          _c("option", [_vm._v("C")])
-        ]
-      ),
-      _vm._v(" "),
-      _c("label", { staticClass: "label" }, [_vm._v("Specialite")]),
-      _vm._v(" "),
-      _c(
-        "SELECT",
-        {
-          staticClass: "border rounded p-3",
-          attrs: { name: "specialite", placeholder: "Specialite" },
-          model: {
-            value: _vm.specialite,
-            callback: function($$v) {
-              _vm.specialite = $$v
-            },
-            expression: "specialite"
-          }
-        },
-        [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.nom,
+                expression: "nom"
+              }
+            ],
+            staticClass: "border rounded p-3",
+            attrs: { type: "text", name: "nom", placeholder: "Nom" },
+            domProps: { value: _vm.nom },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.nom = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticStyle: { display: "flex", "flex-wrap": "wrap" } }, [
           _c(
-            "option",
-            { attrs: { disabled: "disabled", selected: "selected" } },
-            [_vm._v("Spécialité")]
+            "label",
+            {
+              staticClass: "label",
+              staticStyle: {
+                color: "#555",
+                "font-family": "georgia,garamond,serif",
+                "font-size": "16px",
+                "font-style": "bold",
+                "margin-right": "15px",
+                "margin-top": "8px"
+              }
+            },
+            [_vm._v("Prenom")]
           ),
           _vm._v(" "),
-          _c("option", [_vm._v("SL")]),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.prenom,
+                expression: "prenom"
+              }
+            ],
+            staticClass: "border rounded p-3",
+            attrs: { type: "text", name: "prenom", placeholder: "Prenom" },
+            domProps: { value: _vm.prenom },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.prenom = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticStyle: { display: "flex", "flex-wrap": "wrap" } },
+          [
+            _c(
+              "label",
+              {
+                staticClass: "label",
+                staticStyle: {
+                  color: "#555",
+                  "font-family": "georgia,garamond,serif",
+                  "font-size": "16px",
+                  "font-style": "bold",
+                  "margin-right": "15px",
+                  "margin-top": "8px"
+                }
+              },
+              [_vm._v("Niveau")]
+            ),
+            _vm._v(" "),
+            _c(
+              "SELECT",
+              {
+                staticClass: "border rounded p-3",
+                attrs: { name: "niveau", placeholder: "Niveau" },
+                model: {
+                  value: _vm.niveau,
+                  callback: function($$v) {
+                    _vm.niveau = $$v
+                  },
+                  expression: "niveau"
+                }
+              },
+              [
+                _c(
+                  "option",
+                  {
+                    staticStyle: { color: "#919c94" },
+                    attrs: { disabled: "disabled", selected: "selected" }
+                  },
+                  [_vm._v("Choisir un niveau")]
+                ),
+                _vm._v(" "),
+                _c("option", [_vm._v("1CP")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("2CP")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("1CS")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("2CS")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("3CS")])
+              ]
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticStyle: { display: "flex", "flex-wrap": "wrap" } },
+          [
+            _c(
+              "label",
+              {
+                staticClass: "label",
+                staticStyle: {
+                  color: "#555",
+                  "font-family": "georgia,garamond,serif",
+                  "font-size": "16px",
+                  "font-style": "bold",
+                  "margin-right": "15px",
+                  "margin-top": "8px"
+                }
+              },
+              [_vm._v("Section")]
+            ),
+            _vm._v(" "),
+            _c(
+              "SELECT",
+              {
+                staticClass: "border rounded p-3",
+                attrs: { name: "section", placeholder: "Section" },
+                model: {
+                  value: _vm.section,
+                  callback: function($$v) {
+                    _vm.section = $$v
+                  },
+                  expression: "section"
+                }
+              },
+              [
+                _c(
+                  "option",
+                  {
+                    staticStyle: { color: "#919c94" },
+                    attrs: { disabled: "disabled", selected: "selected" }
+                  },
+                  [_vm._v("Choisir une section")]
+                ),
+                _vm._v(" "),
+                _c("option", [_vm._v("A")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("B")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("C")])
+              ]
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticStyle: { display: "flex", "flex-wrap": "wrap" } },
+          [
+            _c(
+              "label",
+              {
+                staticClass: "label",
+                staticStyle: {
+                  color: "#555",
+                  "font-family": "georgia,garamond,serif",
+                  "font-size": "16px",
+                  "font-style": "bold",
+                  "margin-right": "15px",
+                  "margin-top": "8px"
+                }
+              },
+              [_vm._v("Specialite")]
+            ),
+            _vm._v(" "),
+            _c(
+              "SELECT",
+              {
+                staticClass: "border rounded p-3",
+                attrs: { name: "specialite", placeholder: "Specialite" },
+                model: {
+                  value: _vm.specialite,
+                  callback: function($$v) {
+                    _vm.specialite = $$v
+                  },
+                  expression: "specialite"
+                }
+              },
+              [
+                _c(
+                  "option",
+                  {
+                    staticStyle: { color: "#919c94" },
+                    attrs: { disabled: "disabled", selected: "selected" }
+                  },
+                  [_vm._v("Choisir une spécialité")]
+                ),
+                _vm._v(" "),
+                _c("option", [_vm._v("SL")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("ST")]),
+                _vm._v(" "),
+                _c("option", [_vm._v("SQ")])
+              ]
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticStyle: { display: "flex", "flex-wrap": "wrap" } }, [
+          _c(
+            "label",
+            {
+              staticClass: "label",
+              staticStyle: {
+                color: "#555",
+                "font-family": "georgia,garamond,serif",
+                "font-size": "16px",
+                "font-style": "bold",
+                "margin-right": "15px",
+                "margin-top": "8px"
+              }
+            },
+            [_vm._v("Groupe")]
+          ),
           _vm._v(" "),
-          _c("option", [_vm._v("ST")]),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.groupe,
+                expression: "groupe"
+              }
+            ],
+            staticClass: "border rounded p-3",
+            attrs: { type: "number", name: "groupe", placeholder: "Groupe" },
+            domProps: { value: _vm.groupe },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.groupe = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticStyle: { display: "flex", "flex-wrap": "wrap" } }, [
+          _c(
+            "label",
+            {
+              staticClass: "label",
+              staticStyle: {
+                color: "#555",
+                "font-family": "georgia,garamond,serif",
+                "font-size": "16px",
+                "font-style": "bold",
+                "margin-right": "15px",
+                "margin-top": "8px"
+              }
+            },
+            [_vm._v("Promo")]
+          ),
           _vm._v(" "),
-          _c("option", [_vm._v("SQ")])
-        ]
-      ),
-      _vm._v(" "),
-      _c("label", { staticClass: "label" }, [_vm._v("Groupe")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.groupe,
-            expression: "groupe"
-          }
-        ],
-        staticClass: "border rounded p-3",
-        attrs: { type: "number", name: "groupe", placeholder: "Groupe" },
-        domProps: { value: _vm.groupe },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.promo,
+                expression: "promo"
+              }
+            ],
+            staticClass: "border rounded p-3",
+            attrs: { type: "text", name: "promo", placeholder: "Promo" },
+            domProps: { value: _vm.promo },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.promo = $event.target.value
+              }
             }
-            _vm.groupe = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "label" }, [_vm._v("Promo")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.promo,
-            expression: "promo"
-          }
-        ],
-        staticClass: "border rounded p-3",
-        attrs: { type: "text", name: "promo", placeholder: "Promo" },
-        domProps: { value: _vm.promo },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
+          })
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticStyle: { display: "flex", "flex-wrap": "wrap" } }, [
+          _c(
+            "label",
+            {
+              staticClass: "label",
+              staticStyle: {
+                color: "#555",
+                "font-family": "georgia,garamond,serif",
+                "font-size": "16px",
+                "font-style": "bold",
+                "margin-right": "15px",
+                "margin-top": "8px"
+              }
+            },
+            [_vm._v("Adresse")]
+          ),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.adresse,
+                expression: "adresse"
+              }
+            ],
+            staticClass: "border rounded p-3",
+            attrs: { type: "text", name: "adresse", placeholder: "Adresse" },
+            domProps: { value: _vm.adresse },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.adresse = $event.target.value
+              }
             }
-            _vm.promo = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "label" }, [_vm._v("Adresse")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
+          })
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "button",
           {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.adresse,
-            expression: "adresse"
-          }
-        ],
-        staticClass: "border rounded p-3",
-        attrs: { type: "text", name: "adresse", placeholder: "Adresse" },
-        domProps: { value: _vm.adresse },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.adresse = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c(
-        "button",
-        { staticClass: "border rounded py-3", attrs: { type: "submit" } },
-        [_vm._v(" Enregistrer ")]
-      )
-    ],
-    1
-  )
+            staticClass: "border rounded p-3",
+            staticStyle: { color: "#229492" },
+            attrs: { type: "submit" }
+          },
+          [_vm._v(" Enregistrer ")]
+        )
+      ]
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

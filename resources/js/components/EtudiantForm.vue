@@ -1,61 +1,77 @@
 <template>
+<body >
+<form class="flex flex-col" @submit="submitDonnees" style="margin-top =100px;">
 
-
-
-<form class="flex flex-col" @submit="submitDonnees">
-
-    <style type=“text/css”>
-       label { font-size: 16px; color: #555; text-transform: capitalize; display: block; margin-bottom: 5px;}
-    </style>
-     <label class="label">Nom</label>
+    <h2  style="font-style = Poppins,Arial,Helvetica Neue,sans-serif;font-size:24px;color:#525252;font-weight:400;margin-bottom:40px;; margin-top:100px;">Formulaire d'ajout d'étudiants</h2>
+    <div style=" display: flex;flex-wrap: wrap;">
+     <label class="label" style="color:#555;font-family:georgia,garamond,serif;font-size:16px;font-style:bold;margin-right:15px; margin-top:8px;">Nom</label>
      <input type="text" name="nom" placeholder="Nom" class="border rounded p-3" v-model="nom"/>
-  
-     <label class="label">Prenom</label>
+    </div>
+     <br>
+     <div style=" display: flex;flex-wrap: wrap;">
+     <label class="label" style="color:#555;font-family:georgia,garamond,serif;font-size:16px;font-style:bold;margin-right:15px; margin-top:8px; ">Prenom</label>
      <input type="text" name="prenom" placeholder="Prenom" class="border rounded p-3" v-model="prenom"/>
-    
-    <label class="label">Niveau</label>
+     </div>
+     <br>
+     <div style=" display: flex;flex-wrap: wrap;">
+    <label class="label" style="color:#555;font-family:georgia,garamond,serif;font-size:16px;font-style:bold; margin-right:15px; margin-top:8px;">Niveau</label>
     <SELECT name="niveau"  placeholder="Niveau" class="border rounded p-3" v-model="niveau">
+        <option disabled="disabled" selected="selected" style="color:#919c94;">Choisir un niveau</option>
+
         <option>1CP</option>
         <option>2CP</option>
         <option>1CS</option>
         <option>2CS</option>
         <option>3CS</option>
     </SELECT>
-
+     </div>
+ <br>
      <!--<input type="text" name="niveau" placeholder="Niveau" class="border rounded p-3" v-model="niveau"/>-->
-    <label class="label">Section</label>
+    <div style=" display: flex;flex-wrap: wrap;">
+    <label class="label" style="color:#555;font-family:georgia,garamond,serif;font-size:16px;font-style:bold;margin-right:15px; margin-top:8px; ">Section</label>
     <SELECT name="section"  placeholder="Section" class="border rounded p-3" v-model="section">
-        <option disabled="disabled" selected="selected">Section</option>
+        <option disabled="disabled" selected="selected" style="color:#919c94;">Choisir une section</option>
         <option>A</option>
         <option>B</option>
         <option>C</option>
       
     </SELECT>
+     </div>
     <!--<input type="text" name="section" placeholder="Section" class="border rounded p-3" v-model="section"/>-->
-  
-    <label class="label">Specialite</label>
+   <br>
+
+   <div style=" display: flex;flex-wrap: wrap;">
+    <label class="label" style="color:#555;font-family:georgia,garamond,serif;font-size:16px;font-style:bold;margin-right:15px; margin-top:8px; ">Specialite</label>
     <SELECT name="specialite"  placeholder="Specialite" class="border rounded p-3" v-model="specialite">
-        <option disabled="disabled" selected="selected">Spécialité</option>
+        <option disabled="disabled" selected="selected" style="color:#919c94;">Choisir une spécialité</option>
         <option>SL</option>
         <option>ST</option>
         <option>SQ</option>
       
     </SELECT>
+   </div>
     <!-- <input type="text" name="specialite" placeholder="Specialite" class="border rounded p-3" v-model="specialite"/>-->
-    
-     <label class="label">Groupe</label>
+     <br>
+
+     <div style=" display: flex;flex-wrap: wrap;">
+     <label class="label" style="color:#555;font-family:georgia,garamond,serif;font-size:16px;font-style:bold;margin-right:15px; margin-top:8px;">Groupe</label>
      <input type="number" name="groupe" placeholder="Groupe" class="border rounded p-3" v-model="groupe"/>
-  
-    <label class="label">Promo</label>
+     </div>
+   <br>
+   <div style=" display: flex;flex-wrap: wrap;">
+    <label class="label" style="color:#555;font-family:georgia,garamond,serif;font-size:16px;font-style:bold;margin-right:15px ; margin-top:8px;">Promo</label>
     <input type="text" name="promo" placeholder="Promo" class="border rounded p-3" v-model="promo"/>
-    
-    <label class="label">Adresse</label>
+    </div>
+     <br>
+     <div style=" display: flex;flex-wrap: wrap;">
+    <label class="label" style="color:#555;font-family:georgia,garamond,serif;font-size:16px;font-style:bold;margin-right:15px ; margin-top:8px;">Adresse</label>
     <input type="text" name="adresse" placeholder="Adresse" class="border rounded p-3" v-model="adresse"/>
-    
-    
-    <button type="submit" class="border rounded py-3"> Enregistrer </button>
+     </div>
+     <br>
+    <button type="submit" class="border rounded p-3" style="color:#229492" > Enregistrer </button>
     
     </form>
+</body>
 </template>
 
 <script>
