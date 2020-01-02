@@ -5,11 +5,28 @@
     
     <input type="text" name="prenom" placeholder="Prenom" class="border rounded p-3" v-model="prenom"/>
     
-     <input type="text" name="niveau" placeholder="Niveau" class="border rounded p-3" v-model="niveau"/>
-   
-    <input type="text" name="section" placeholder="Section" class="border rounded p-3" v-model="section"/>
-    
-     <input type="text" name="specialite" placeholder="Specialite" class="border rounded p-3" v-model="specialite"/>
+    <SELECT name="niveau"  placeholder="Niveau" class="border rounded p-3" v-model="niveau">
+        <option>1CP</option>
+        <option>2CP</option>
+        <option>1CS</option>
+        <option>2CS</option>
+        <option>3CS</option>
+    </SELECT>
+     <!--<input type="text" name="niveau" placeholder="Niveau" class="border rounded p-3" v-model="niveau"/>-->
+    <SELECT name="section"  placeholder="Section" class="border rounded p-3" v-model="section">
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+      
+    </SELECT>
+    <!--<input type="text" name="section" placeholder="Section" class="border rounded p-3" v-model="section"/>-->
+    <SELECT name="specialite"  placeholder="Specialite" class="border rounded p-3" v-model="specialite">
+        <option>SL</option>
+        <option>ST</option>
+        <option>SQ</option>
+      
+    </SELECT>
+    <!-- <input type="text" name="specialite" placeholder="Specialite" class="border rounded p-3" v-model="specialite"/>-->
     
      <input type="number" name="groupe" placeholder="Groupe" class="border rounded p-3" v-model="groupe"/>
   

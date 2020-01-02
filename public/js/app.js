@@ -1864,6 +1864,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['etudiants'],
   data: function data() {
@@ -37350,71 +37367,75 @@ var render = function() {
         }
       }),
       _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
+      _c(
+        "SELECT",
+        {
+          staticClass: "border rounded p-3",
+          attrs: { name: "niveau", placeholder: "Niveau" },
+          model: {
             value: _vm.niveau,
+            callback: function($$v) {
+              _vm.niveau = $$v
+            },
             expression: "niveau"
           }
-        ],
-        staticClass: "border rounded p-3",
-        attrs: { type: "text", name: "niveau", placeholder: "Niveau" },
-        domProps: { value: _vm.niveau },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.niveau = $event.target.value
-          }
-        }
-      }),
+        },
+        [
+          _c("option", [_vm._v("1CP")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("2CP")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("1CS")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("2CS")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("3CS")])
+        ]
+      ),
       _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
+      _c(
+        "SELECT",
+        {
+          staticClass: "border rounded p-3",
+          attrs: { name: "section", placeholder: "Section" },
+          model: {
             value: _vm.section,
+            callback: function($$v) {
+              _vm.section = $$v
+            },
             expression: "section"
           }
-        ],
-        staticClass: "border rounded p-3",
-        attrs: { type: "text", name: "section", placeholder: "Section" },
-        domProps: { value: _vm.section },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.section = $event.target.value
-          }
-        }
-      }),
+        },
+        [
+          _c("option", [_vm._v("A")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("B")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("C")])
+        ]
+      ),
       _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
+      _c(
+        "SELECT",
+        {
+          staticClass: "border rounded p-3",
+          attrs: { name: "specialite", placeholder: "Specialite" },
+          model: {
             value: _vm.specialite,
+            callback: function($$v) {
+              _vm.specialite = $$v
+            },
             expression: "specialite"
           }
-        ],
-        staticClass: "border rounded p-3",
-        attrs: { type: "text", name: "specialite", placeholder: "Specialite" },
-        domProps: { value: _vm.specialite },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.specialite = $event.target.value
-          }
-        }
-      }),
+        },
+        [
+          _c("option", [_vm._v("SL")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("ST")]),
+          _vm._v(" "),
+          _c("option", [_vm._v("SQ")])
+        ]
+      ),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -37487,7 +37508,8 @@ var render = function() {
         { staticClass: "border rounded py-3", attrs: { type: "submit" } },
         [_vm._v(" Enregistrer ")]
       )
-    ]
+    ],
+    1
   )
 }
 var staticRenderFns = []
