@@ -1881,6 +1881,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['etudiants'],
   data: function data() {
@@ -37313,16 +37325,26 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "form",
-    {
-      staticClass: "flex flex-col",
-      on: {
-        submit: function($event) {
-          $event.preventDefault()
-          return _vm.submitDonnees($event)
-        }
-      }
-    },
+    { staticClass: "flex flex-col", on: { submit: _vm.submitDonnees } },
     [
+      _c(
+        "label",
+        {
+          staticClass: "label",
+          attrs: {
+            "font-size:16px": "",
+            "color:#555": "",
+            "texte-transform:": "",
+            capitalize: "",
+            "display:": "",
+            block: "",
+            "margin-bottom:": "",
+            "5px": ""
+          }
+        },
+        [_vm._v("Nom")]
+      ),
+      _vm._v(" "),
       _c("input", {
         directives: [
           {
@@ -37345,6 +37367,8 @@ var render = function() {
         }
       }),
       _vm._v(" "),
+      _c("label", { staticClass: "label" }, [_vm._v("Prenom")]),
+      _vm._v(" "),
       _c("input", {
         directives: [
           {
@@ -37366,6 +37390,8 @@ var render = function() {
           }
         }
       }),
+      _vm._v(" "),
+      _c("label", { staticClass: "label" }, [_vm._v("Niveau")]),
       _vm._v(" "),
       _c(
         "SELECT",
@@ -37393,6 +37419,8 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
+      _c("label", { staticClass: "label" }, [_vm._v("Section")]),
+      _vm._v(" "),
       _c(
         "SELECT",
         {
@@ -37407,6 +37435,12 @@ var render = function() {
           }
         },
         [
+          _c(
+            "option",
+            { attrs: { disabled: "disabled", selected: "selected" } },
+            [_vm._v("Section")]
+          ),
+          _vm._v(" "),
           _c("option", [_vm._v("A")]),
           _vm._v(" "),
           _c("option", [_vm._v("B")]),
@@ -37414,6 +37448,8 @@ var render = function() {
           _c("option", [_vm._v("C")])
         ]
       ),
+      _vm._v(" "),
+      _c("label", { staticClass: "label" }, [_vm._v("Specialite")]),
       _vm._v(" "),
       _c(
         "SELECT",
@@ -37429,6 +37465,12 @@ var render = function() {
           }
         },
         [
+          _c(
+            "option",
+            { attrs: { disabled: "disabled", selected: "selected" } },
+            [_vm._v("Spécialité")]
+          ),
+          _vm._v(" "),
           _c("option", [_vm._v("SL")]),
           _vm._v(" "),
           _c("option", [_vm._v("ST")]),
@@ -37436,6 +37478,8 @@ var render = function() {
           _c("option", [_vm._v("SQ")])
         ]
       ),
+      _vm._v(" "),
+      _c("label", { staticClass: "label" }, [_vm._v("Groupe")]),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -37459,6 +37503,8 @@ var render = function() {
         }
       }),
       _vm._v(" "),
+      _c("label", { staticClass: "label" }, [_vm._v("Promo")]),
+      _vm._v(" "),
       _c("input", {
         directives: [
           {
@@ -37480,6 +37526,8 @@ var render = function() {
           }
         }
       }),
+      _vm._v(" "),
+      _c("label", { staticClass: "label" }, [_vm._v("Adresse")]),
       _vm._v(" "),
       _c("input", {
         directives: [

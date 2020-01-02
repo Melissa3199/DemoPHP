@@ -1,10 +1,19 @@
 <template>
 
-<form class="flex flex-col" @submit.prevent="submitDonnees">
+
+
+<form class="flex flex-col" @submit="submitDonnees">
+
+    <style type=“text/css”>
+       label { font-size: 16px; color: #555; text-transform: capitalize; display: block; margin-bottom: 5px;}
+    </style>
+     <label class="label">Nom</label>
      <input type="text" name="nom" placeholder="Nom" class="border rounded p-3" v-model="nom"/>
+  
+     <label class="label">Prenom</label>
+     <input type="text" name="prenom" placeholder="Prenom" class="border rounded p-3" v-model="prenom"/>
     
-    <input type="text" name="prenom" placeholder="Prenom" class="border rounded p-3" v-model="prenom"/>
-    
+    <label class="label">Niveau</label>
     <SELECT name="niveau"  placeholder="Niveau" class="border rounded p-3" v-model="niveau">
         <option>1CP</option>
         <option>2CP</option>
@@ -12,15 +21,21 @@
         <option>2CS</option>
         <option>3CS</option>
     </SELECT>
+
      <!--<input type="text" name="niveau" placeholder="Niveau" class="border rounded p-3" v-model="niveau"/>-->
+    <label class="label">Section</label>
     <SELECT name="section"  placeholder="Section" class="border rounded p-3" v-model="section">
+        <option disabled="disabled" selected="selected">Section</option>
         <option>A</option>
         <option>B</option>
         <option>C</option>
       
     </SELECT>
     <!--<input type="text" name="section" placeholder="Section" class="border rounded p-3" v-model="section"/>-->
+  
+    <label class="label">Specialite</label>
     <SELECT name="specialite"  placeholder="Specialite" class="border rounded p-3" v-model="specialite">
+        <option disabled="disabled" selected="selected">Spécialité</option>
         <option>SL</option>
         <option>ST</option>
         <option>SQ</option>
@@ -28,12 +43,14 @@
     </SELECT>
     <!-- <input type="text" name="specialite" placeholder="Specialite" class="border rounded p-3" v-model="specialite"/>-->
     
+     <label class="label">Groupe</label>
      <input type="number" name="groupe" placeholder="Groupe" class="border rounded p-3" v-model="groupe"/>
   
-      <input type="text" name="promo" placeholder="Promo" class="border rounded p-3" v-model="promo"/>
+    <label class="label">Promo</label>
+    <input type="text" name="promo" placeholder="Promo" class="border rounded p-3" v-model="promo"/>
     
-    
-      <input type="text" name="adresse" placeholder="Adresse" class="border rounded p-3" v-model="adresse"/>
+    <label class="label">Adresse</label>
+    <input type="text" name="adresse" placeholder="Adresse" class="border rounded p-3" v-model="adresse"/>
     
     
     <button type="submit" class="border rounded py-3"> Enregistrer </button>
